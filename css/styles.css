@@ -1,0 +1,713 @@
+body {
+ margin: 0;
+ padding: 0;
+ background-color: #fff7f7;
+}
+
+
+header {
+    font-family: 'Luckiest Guy', cursive;
+    background-color: #ff8585; /* Теплий відтінок зеленого */
+    padding: 20px 0;
+    position: fixed; /* Фіксація хедера */
+    width: 90%; /* Ширина 80% */
+    top: 18px; /* Відступ від верхньої частини */
+    left: 50%; /* Центрування */
+    transform: translateX(-50%); /* Центрування */
+    border-radius: 50px; /* Закруглені краї */
+    z-index: 1000; /* Щоб хедер був поверх інших елементів */
+}
+
+.container {
+    height: 25px; /* Встановлення конкретної висоти */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    color: white;
+   -webkit-text-stroke: 1px black;
+    font-family: 'Luckiest Guy', cursive; /* Використання шрифту Luckiest Guy */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+
+
+nav a {
+     color: white;
+     -webkit-text-stroke: 1px black;
+      text-decoration: none;
+}
+
+.social-buttons {
+    display: flex; /* Размещаем в строку */
+    flex-direction: row; /* Принудительно в ряд */
+    align-items: center; /* Выравниваем по центру */
+    justify-content: center; /* Центрируем */
+    gap: 10px; /* Расстояние между иконками */
+
+}
+ .social-buttons a {
+   background-color: white;
+       color: #4CAF50;
+       border-radius: 50%;
+       width: 40px;
+       height: 40px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       text-decoration: none;
+       font-size: 20px;
+}
+
+.cta-button {
+    font-size: 18px;
+    font-family: 'Luckiest Guy', cursive;
+    background-color: #f74d4d; /* Темніший відтінок зеленого для кнопки Buy Now */
+    color: white;
+    -webkit-text-stroke: 1px black;
+    padding: 15px 20px; /* Зменшене наповнення */
+    border: none;
+    border-radius: 25px; /* Закруглені краї */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #f51111; /* Темніший відтінок при наведенні */
+}
+
+
+/* ===== Home Page ===== */
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Висота на весь екран */
+    padding: 20px;
+}
+
+/* Контейнер для Home Page */
+.home-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Ліва частина: Зображення */
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.home-image img {
+    width: 250px ;
+    height: auto;
+}
+
+/* Права частина: Текст */
+.home-text {
+    flex: 1;
+    text-align:left;
+}
+
+.home-text h1 {
+    font-size: 60px; /* Дуже великий текст */
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.home-text p {
+    font-size: 20px;
+    color: #444;
+    line-height: 1.5;
+
+}
+
+
+
+/* Контейнер с анимацией */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color:#ff5556;
+    padding: 5px 0; /* Увеличенный отступ */
+    position: relative;
+    border-top: 5px solid #f41515; /* Верхняя зелёная полоса */
+    border-bottom: 5px solid #f41515; /* Нижняя темно-зелёная #4caf50*/
+}
+
+/* Блок, который движется */
+.marquee {
+    display: flex; /* Делаем флекс, чтобы было 2 копии */
+    gap: 100px; /* Промежуток между копиями текста */
+    font-size: 40px; /* Увеличенный размер текста */
+    font-weight: bold;
+    font-family: 'Luckiest Guy', cursive;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Тень для текста */
+    animation: marquee 9000s linear infinite;
+    width: max-content; /* Длина зависит от текста */
+}
+
+/* Создаём эффект бесконечной прокрутки */
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+/* ===== Секція контрактної адреси ===== */
+.contract-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff7f7 ;
+}
+
+.contract-section h2 {
+    font-size: 80px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+    font-family: 'Luckiest Guy', cursive;
+    color: #fff;
+    margin-bottom: 10px;
+    transform: translateY(-50px);
+}
+
+.contract-section p {
+    transform: translateY(-50px);
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Блок контрактної адреси */
+.contract-box {
+    transform: translateY(-50px);
+    border: 3px solid black; /* Товщина 3px, суцільна лінія, чорний колір */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    margin: 20px auto;
+    background:#facfcf;
+    padding: 8px;
+    border-radius: 50px;
+}
+
+.contract-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.contract-box button {
+    background-color: #ff3233;
+    color: white;
+    border: none;
+    padding: 3px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.contract-box button:hover {
+    background-color: #388E3C;
+}
+
+/* Кнопки з посиланнями */
+.contract-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contract-button-tonscan {
+    border: 3px solid black;
+    -webkit-text-stroke: 1px black;
+    font-family: 'Luckiest Guy', cursive;
+    transform: translateY(-50px);
+    background-color: white;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.contract-button-blum {
+    border: 3px solid black;
+    -webkit-text-stroke: 1px black;
+    font-family: 'Luckiest Guy', cursive;
+    transform: translateY(-50px);
+    background-color: white;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s;
+  }
+
+  .contract-button-coinmarketcap {
+      border: 3px solid black;
+      -webkit-text-stroke: 1px black;
+      font-family: 'Luckiest Guy', cursive;
+      transform: translateY(-50px);
+      background-color: white;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.3s;
+}
+.contract-button-blum:hover {
+
+  background-color: #fa9d9d;
+}
+
+.contract-button-tonscan:hover {
+
+  background-color: #fa9d9d;
+}
+
+.contract-button-coinmarketcap:hover {
+
+  background-color: #fa9d9d;
+}
+
+.contract-buttons:hover {
+    background-color: #388E3C;
+}
+
+
+/* ===== Блок "ABOUT US" ===== */
+.about-section {
+    transform: translateY(-50px);
+    background-color: white;
+    border-radius: 20px; /* Закругленные края */
+    padding: 40px;
+    max-width: 1000px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
+    font-family: 'Luckiest Guy', cursive; /* Наш кастомный шрифт */
+}
+
+/* Верхний ряд (Заголовок + Иконки) */
+.about-header {
+    transform: translateY(-50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Заголовок */
+.about-header h2 {
+    font-size: 50px;
+    color:white;
+    -webkit-text-stroke: 2px black;
+}
+
+/* Иконки соцсетей */
+.about-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.about-icons a {
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.about-icons a:hover {
+    background-color: #388E3C;
+}
+
+/* Текст */
+.about-section p {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* ===== Блок "HOW TO BUY" ===== */
+.buy-section {
+    text-align: center;
+    background-color: white;
+    border-radius: 20px; /* Закругленные края */
+    padding: 50px;
+    max-width: 1000px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
+    font-family: 'Luckiest Guy', cursive; /* Наш кастомный шрифт */
+}
+
+/* Заголовок */
+.buy-section h2 {
+  color:white;
+  -webkit-text-stroke: 1px black;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* Контейнер с шагами */
+.buy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Блоки (все одинаковые) */
+.buy-box {
+    background-color:  #fa9d9d ;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 30%; /* Одинаковая ширина */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Анимация при наведении */
+.buy-box:hover {
+    transform: scale(1.05); /* Лёгкое увеличение */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Заголовки внутри блоков */
+.buy-box h3 {
+  color:white;
+  -webkit-text-stroke: 1px black;
+    font-size: 24px;
+      margin-bottom: 10px;
+}
+
+/* Текст внутри блоков */
+.buy-box p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Стрелка */
+.buy-arrow {
+    font-size: 40px;
+    color: #ff1617;
+    font-weight: bold;
+}
+
+/* ===== Блок "Tokenomics" ===== */
+.tokenomics-section {
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 1000px; /* Чуть шире, чтобы всё красиво помещалось */
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Luckiest Guy', cursive;
+}
+
+/* Заголовок */
+.tokenomics-section h2 {
+    font-size: 40px;
+    color:white;
+    -webkit-text-stroke: 1px black;
+    margin-bottom: 30px;
+}
+
+/* Контейнер с диаграммой и текстом */
+.tokenomics-container {
+
+    display: flex;
+    justify-content: center; /* Центрируем */
+    align-items: center;
+    gap: 50px; /* Пространство между кругом и текстом */
+}
+
+/* Круговая диаграмма */
+.tokenomics-chart {
+    transform: translateX(50px);
+    width: 50%;
+    max-width: 400px; /* Теперь 400px */
+    display: flex;
+    justify-content: center;
+}
+
+/* Описание с цветными блоками */
+.tokenomics-text {
+    transform: translateX(50px);
+    width: 50%;
+    text-align: left;
+}
+
+.tokenomics-text p {
+    font-size: 20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0;
+}
+
+/* Цветные блоки */
+.color-box {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background: linear-gradient(135deg, #D32F2F, #FF5252); /* Красный градиент */
+    color: white;
+    padding: 30px 20px;
+    border-radius: 30px 30px 0 0; /* Закругляем верхние углы */
+    height: 50px
+}
+
+/* Контейнер футера */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Логотип слева, соцсети справа */
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Логотип */
+.footer-logo h2 {
+  color:white;
+  -webkit-text-stroke: 1px black;
+    font-size: 28px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+/* Соцсети */
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    background: white;
+    color: #D32F2F;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.footer-social a:hover {
+    background: #FF5252;
+    color: white;
+}
+
+/* Копирайт */
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+@media (max-width : 375px) {
+  .tokenomics-text p {
+    transform: translateX(-20px);
+  }
+
+  .tokenomics-chart{
+display:none;
+}
+  .buy-container {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buy-box {
+    width: 100%;
+}
+
+.buy-arrow {
+    font-size: 30px; /* Делаем стрелку меньше */
+}
+
+.home-text{
+
+align-items: center;
+}
+
+header{
+
+ display:none;
+}
+
+.home-image{
+
+  display: none;
+}
+
+.contract-button-coinmarketcap{
+
+  display : none;
+}
+
+.contract-button-tonscan{
+  display :none;
+}
+}
+
+
+@media (max-width : 320px) {
+
+  .tokenomics-text p {
+    transform: translateX(-40px);
+  }
+
+  .tokenomics-chart{
+display:none;
+}
+
+  .buy-container {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buy-box {
+    width: 100%;
+}
+
+.buy-arrow {
+    font-size: 30px; /* Делаем стрелку меньше */
+}
+
+  .home-text{
+
+  align-items: center;
+  }
+
+header {
+  display: none;
+}
+
+.home-image{
+
+  display: none;
+}
+.contract-button-coinmarketcap{
+
+  display : none;
+}
+
+.contract-button-tonscan{
+  display :none;
+}
+
+}
+
+@media (max-width : 425px) {
+
+  .tokenomics-text p {
+    transform: translateX(-20px);
+  }
+
+  .tokenomics-chart{
+display:none;
+}
+
+  .tokenomics-section {
+    padding: 30px;
+}
+
+.tokenomics-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.tokenomics-chart {
+    width: 80%;
+    max-width: 350px; /* Чуть меньше, чтобы лучше смотрелось */
+}
+
+.tokenomics-text {
+    width: 100%;
+    text-align: center;
+}
+
+.tokenomics-text p {
+    font-size: 18px;
+}
+  .buy-container {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buy-box {
+    width: 100%;
+}
+
+.buy-arrow {
+    font-size: 30px; /* Делаем стрелку меньше */
+}
+  .home-text{
+
+  align-items: center;
+  }
+
+header {
+  display: none;
+}
+.home-image{
+
+  display: none;
+}
+
+.contract-button-coinmarketcap{
+
+  display : none;
+}
+
+.contract-button-tonscan{
+  display :none;
+}
+
+}
